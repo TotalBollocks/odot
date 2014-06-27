@@ -8,6 +8,9 @@
 </head>
 <body>
   
+  <%= link_to "Odot", root_path %>
+  <%= link_to "Todo Lists", todo_lists_path %>
+  
   <% flash.each do |type, msg| %>
   <p><%= msg %></p>
   <% end %>
