@@ -6,7 +6,8 @@
       <%= item.content %>
       <%= link_to "Edit", [:edit, @todo_list, item] %>
       <%= link_to "Delete", [@todo_list, item], method: :delete, data: { confirm: "Are you sure?" } %>
-  </li>
+      <%= link_to "Mark complete", [:complete, @todo_list, item], method: :patch %>
+    </li>
   <% end %>
 </ul>
 

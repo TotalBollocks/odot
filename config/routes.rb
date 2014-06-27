@@ -1,6 +1,10 @@
 Odot::Application.routes.draw do
+  root 'todo_lists#index'
+  
   resources :todo_lists do
-    resources :todo_items
+    resources :todo_items do
+      patch 'complete', on: :member
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
